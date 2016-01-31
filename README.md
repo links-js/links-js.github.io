@@ -1,1 +1,1 @@
-This is *build* version of [Links](https://github.com/links-js/links)
+This is *build* version of [Links](https://github.com/dogancelik/links)
