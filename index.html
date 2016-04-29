@@ -46,26 +46,35 @@
                 <textarea ng-model="settings.url" class="form-control"></textarea>
               </div>
               <div class="form-group">
-                <button ng-class="{active: settings.cache, 'btn-success': settings.cache}" ng-click="settings.cache = !settings.cache" class="btn btn-default">Activate Cache</button>
+                <button ng-class="{active: settings.cache, 'btn-success': settings.cache}" ng-click="settings.cache = !settings.cache" class="btn btn-default">Activate Cache</button>&nbsp;<a href="https://github.com/links-js/links/wiki/Sources" target="_blank" class="btn btn-default">List of sources</a>
               </div>
-              <div class="form-group"><a href="https://github.com/links-js/links/wiki/Sources" target="_blank" class="sources">List of sources</a></div>
-              <div class="form-group">
-                <label for="settings-suggestions">Max suggestions</label>
-                <input id="settings-suggestions" ng-model="settings.limit" class="form-control">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label for="settings-suggestions">Max suggestions</label>
+                    <input id="settings-suggestions" ng-model="settings.limit" class="form-control">
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <label>Open files in</label>
+                    <select ng-model="settings.openFile" class="form-control">
+                      <option value="new">New tab</option>
+                      <option value="current">Current tab</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label>Open pages in</label>
+                    <select ng-model="settings.openPage" class="form-control">
+                      <option value="new">New tab</option>
+                      <option value="current">Current tab</option>
+                    </select>
+                  </div>
+                </div>
               </div>
               <div class="form-group">
-                <label>Open files in</label>
-                <select ng-model="settings.openFile" class="form-control">
-                  <option value="new">New tab</option>
-                  <option value="current">Current tab</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label>Open pages in</label>
-                <select ng-model="settings.openPage" class="form-control">
-                  <option value="new">New tab</option>
-                  <option value="current">Current tab</option>
-                </select>
+                <label>Custom CSS</label>
+                <textarea ng-model="settings.css" class="form-control"></textarea>
               </div>
               <div class="text-right">
                 <button ng-click="reset()" class="btn btn-default">Reset Settings</button>
