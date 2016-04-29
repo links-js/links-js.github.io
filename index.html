@@ -3,6 +3,8 @@
   <head>
     <title>Links</title>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="index.css">
@@ -79,7 +81,7 @@
     <script type="text/ng-template" id="typeahead.html">
       <div class="row">
         <div class="col-md-12">
-          <form>
+          <form id="type-form">
             <input id="typeahead" type="text" placeholder="Search for links" class="my-typeahead form-control input-lg">
           </form>
         </div>
@@ -95,9 +97,9 @@
           </form>
           <div ng-repeat="link in searchResults | limitTo: settings.limit" ng-if="term != &quot;&quot;" class="panel panel-default">
             <div class="panel-heading"><span class="panel-title"><span class="text-muted">&#35;{{ $index+1 }}</span>&nbsp;{{ link.name }}&nbsp;</span>
-              <ul class="list-inline pull-right">
+              <ul class="hidden-xs list-inline pull-right">
                 <li ng-repeat="tag in link.tags"><span><a ng-href="/#/list/tag:{{ tag }}">&#35;{{ tag }}</a></span></li>
-              </ul><span class="text-muted pull-right">{{ link._url | filename }}&nbsp;|&nbsp;</span>
+              </ul><span class="hidden-xs text-muted pull-right">{{ link._url | filename }}&nbsp;|&nbsp;</span>
             </div>
             <div class="panel-body"><a ng-href="{{ link.url }}" ng-bind="link.url"></a></div>
           </div>
