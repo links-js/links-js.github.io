@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="index.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
   </head>
@@ -28,7 +28,8 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a id="browserstack" href="http://www.browserstack.com/"><i class="fa fa-star"></i>&nbsp;BrowserStack</a></li>
             <li><a id="donate" href="http://dogancelik.com/donate.html"><i class="fa fa-heart"></i>&nbsp;Donate</a></li>
-            <li><a href="https://github.com/links-js/links"><i class="fa fa-github"></i>&nbsp;Github</a></li>
+            <li><a href="https://gitter.im/dogancelik/links"><i class="fa fa-comments"></i>&nbsp;<span>Gitter</span>&nbsp;<small>(Chat)</small></a></li>
+            <li><a href="https://github.com/dogancelik/links"><i class="fa fa-github"></i>&nbsp;Github</a></li>
           </ul>
         </div>
       </nav>
@@ -54,6 +55,10 @@
                   <div class="form-group">
                     <label for="settings-suggestions">Max suggestions</label>
                     <input id="settings-suggestions" ng-model="settings.limit" class="form-control">
+                  </div>
+                  <div class="form-group hidden">
+                    <label for="settings-filter">Filter by tag</label>
+                    <input id="settings-filter" ng-model="settings.filter" class="form-control">
                   </div>
                 </div>
                 <div class="col-sm-6">
